@@ -2,6 +2,13 @@
 
 This repository contains the source code for a School Management System API implemented in Java Spring Boot. The API provides CRUD operations for managing students, parents, and teachers.
 
+## Requirements
+
+- Java Development Kit (JDK) installed on your machine
+- Maven installed on your machine
+- MySQL database server running locally
+- Postman (or any similar tool) for testing APIs
+  
 ## Features
 
 - CRUD operations for managing students, parents, and teachers.
@@ -9,7 +16,7 @@ This repository contains the source code for a School Management System API impl
 - MySQL database integration for data persistence.
 - Modular and scalable project structure.
 
-## Setup
+## Running the Project Locally
 
 To run the School Management API locally, follow these steps:
 
@@ -23,13 +30,32 @@ To run the School Management API locally, follow these steps:
    - Create a MySQL database for the project.
    - Update the `application.properties` file in `src/main/resources` with your MySQL database configuration.
 
-3. **Run the Application:**
-   ```bash
-   ./mvnw spring-boot:run
-   ```
+3. **Update the database configuration:**
+    - Open the `application.properties` file located in the `src/main/resources` directory.
+    - Modify the `spring.datasource.url`, `spring.datasource.username`, and `spring.datasource.password` properties to match your MySQL database configuration.
 
-4. **Access the API:**
-   - Once the application is running, you can access the API endpoints using tools like Postman or cURL.
+4. **Build the project using Maven:**
+
+    ```
+    mvn clean package
+    ```
+
+5. **Run the project:**
+
+    ```
+    java -jar target/<jar-file-name>.jar
+    ```
+
+6. **The application should now be running locally. You can access it using the following base URL:**
+
+    ```
+    http://localhost:8080
+    ```
+
+## Error Handling
+
+- Proper error handling is implemented in the API endpoints to handle failures gracefully.
+- HTTP status codes and error messages are returned in case of failures, providing meaningful feedback to clients.
 
 ## API Endpoints
 
