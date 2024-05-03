@@ -10,7 +10,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver  # MySQL JDBC driver class
     username: root  # MySQL database username
     url: jdbc:mysql://localhost:3306/user_db  # JDBC URL for connecting to the MySQL database
-    password: EmanueL@15  # MySQL database password
+    password:   # MySQL database password
 
   jpa:
     # Hibernate configuration
